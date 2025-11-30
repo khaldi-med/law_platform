@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JurisMind - AI Legal Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+              juris: {
+                50: '#f4f6f8',
+                100: '#e4e8ed',
+                200: '#c5d0db',
+                300: '#97aec0',
+                400: '#688aa0',
+                500: '#4a6d85',
+                600: '#38556b',
+                700: '#2e4456',
+                800: '#283a48',
+                900: '#25313d',
+              },
+              gold: {
+                500: '#c5a059', // Classic legal gold accent
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc;
+      }
+      /* Custom scrollbar for legal text areas */
+      .legal-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .legal-scroll::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      .legal-scroll::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .legal-scroll::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      /* Print styles for PDF generation */
+      @media print {
+        .no-print { display: none; }
+        .print-only { display: block; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
